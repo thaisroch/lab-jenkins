@@ -26,4 +26,19 @@ $ git remote add origin git@github.com:thaisroch/lab-jenkins.git
 $ git push -u origin main
 
 
+## INSERINDO CREDENCIAIS NO AMBIENTE JENKINS
+#
+#ACESSAR NO JENKINS PARA CRIAÇÃO DE CREDENCIAIS 
 
+#manage/credentials/system/credentialsglobal/newCredentials
+
+## CONFIGURAÇÃO DE CREDENCIAIS DE COMUNICAÇÃO DO GITHUB COM O JENKINS
+#KIND:  SSH USERNAME WITH PRIVATE KEY
+#SCOPE: DEFAULT
+#ID : github-ssh  ## um identificador para reconhecer dentro do jenkis para jobs futuros.
+#USERNAME: git
+#PRIVATY KEY:  #BUSCAR EM cat ~/.ssh/id_rsa
+
+
+## CRIANDO UM JOB  TIPO FREE-STYLE
+# 
