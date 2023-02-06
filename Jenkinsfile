@@ -19,6 +19,11 @@ pipeline {
 			
 		}
 	    }	
-	}       
+	}
+	stage ('Deploy Kubernetes') {
+	    script {
+	        echo "iniciar o CD com deploymnet para o cluster"	
+	    }
+	}
     }
 }
