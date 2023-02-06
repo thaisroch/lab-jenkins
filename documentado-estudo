@@ -1,0 +1,29 @@
+ 
+## CRIANDO UMA CHAVE SSH NO AMBIENTE
+$ ssh-keygen -t rsa -b 4096 -C "rochathais.ml@gmail.com"
+  
+## CONFIGURANDO O AMBIENTE COM O MEU GITHUB
+$ git config --global user.name "thaisroch"
+$ git config --global user.email "rochathais.ml@gmail.com"
+  
+## PEGANDO A MINHA CHAVE PUBLICA PARA CRIAR CONEXÃO COM O MEU GUTHUB - SETTING/SSH keys
+$ cat /home/ubuntu/.ssh/id_rsa.pub
+
+## TESTANDO A CONEXÃO
+$ssh -T git@github.com
+  
+##CRIANDO MEU AMBIENTE LOCAL 
+  mkdir projeto-todo
+  projeto-todo/
+
+## INICIANDO O VERSIONAMENTO DO CÓDIGO
+$ git init
+$ git branch -M main
+$ git add .
+$ git commit -m "iniciando o projeto"
+$ git log
+$ git remote add origin git@github.com:thaisroch/lab-jenkins.git
+$ git push -u origin main
+
+
+
