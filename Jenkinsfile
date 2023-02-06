@@ -1,9 +1,12 @@
 pipeline {
     agent any
+
     stages {
-	stage ('inicial'){
+	stage ('Biuld Image'){
             steps {
-                 echo 'Iniciando pipeline';
+		script{
+                  dockerapp = docker.biuld("rochathais/api-produto", '-f ./src/Dockerfile ./src')
+		}
             }
 	}       
     }
