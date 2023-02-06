@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     stages {
-	stage ('Biuld Image'){
+	stage ('Build Image'){
             steps {
-		script{
-                  dockerapp = docker.biuld("rochathais/api-produto", '-f ./src/Dockerfile ./src')
+		script {
+                    dockerapp = docker.build("rochathais/api-produto", '-f ./src/Dockerfile ./src')
 		}
             }
 	}       
